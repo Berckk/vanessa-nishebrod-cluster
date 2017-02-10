@@ -64,3 +64,12 @@ variable "coreos" {
   description = "Defaut Coreos"
   default     = "coreos-899.17.0"
 }
+
+
+# переменные необходимо объявить
+variable  "do_token" {default = ""}
+variable  "atlas_token" {default = ""}
+variable  "org" {default = ""}
+variable  "ssh_fingerprint" { default = ""}
+variable  "pub_key" { default = ""}
+variable  "pvt_key" { default = ""}

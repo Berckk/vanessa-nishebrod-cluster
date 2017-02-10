@@ -45,48 +45,18 @@
     "script": "./images/build.sh"
   }
   ],
-  "post-processors": [{
-      "type": "atlas",
-      "token": "{{user `atlas_token`}}",
-      "artifact": "silverbulleters/vanessa-apache-cluster-ub16LTSmaster-do",
-      "artifact_type": "digitalocean.image",
-      "metadata": {
-         "created_at": "{{timestamp}}"
-      }
-    },
-    {
-      "type": "atlas",
-      "token": "{{user `atlas_token`}}",
-      "artifact": "silverbulleters/vanessa-apache-cluster-ub16LTSmaster-openstack",
-      "artifact_type": "openstack.image",
-      "metadata": {
-         "created_at": "{{timestamp}}"
-      }
-    },
-    {
-      "type": "atlas",
-      "token": "{{user `atlas_token`}}",
-      "artifact": "silverbulleters/vanessa-apache-cluster-ub16LTSmaster-virtb",
-      "artifact_type": "virtualbox.image",
-      "metadata": {
-         "created_at": "{{timestamp}}"
-      }
-    },
-    {
-      "type": "atlas",
-      "token": "{{user `atlas_token`}}",
-      "artifact": "silverbulleters/vanessa-apache-cluster-ub16LTSmaster-vagbox",
-      "artifact_type": "vagrant.box",
-      "metadata": {
-         "created_at": "{{timestamp}}"
-      }
-    }
-
-  ],
+  "post-processors": [
+  {
+      "type": "vagrant",
+      "output": "ubuntu-14-04-x64-virtualbox.box"
+     
+}
+   ],
 
   "variables": {
       "do_api_token": "",
       "atlas_token": "",
+      "org": "",
       "compression_level": "6"
   }
 }

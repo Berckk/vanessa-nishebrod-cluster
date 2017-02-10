@@ -2,10 +2,11 @@ provider "digitalocean" {
   token = "${var.do_token}"
 }
 
-resource "atlas_artifact" "vanessa-apache-cluster-ub16LTSmaster-do" {
-  name = "silverbulleters/vanessa-apache-cluster-ub16LTSmaster-do"
+ "atlas_artifact" "vanessa-apache-cluster-ub16LTSmaster-do" {
+  name = "${var.org}/vanessa-apache-cluster-ub16LTSmaster-do"
   type = "digitalocean.image"
-  version = "1"
+  version = "latest"
+  token = "${var.atlas_token}"
 }
 
 resource "digitalocean_droplet" "vanessa" {
